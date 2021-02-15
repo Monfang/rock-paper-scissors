@@ -21,35 +21,59 @@
     }   
     //console.log(capitalise(playerChoice));
 
+    
+
 
     function playRound (playerSelection, computerSelection) {
+
         if (playerSelection === "Rock" && computerSelection === "Scissors") {
+            playerScore += 1;
             return "You Win! Rock beats Scissors!";
             } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+                playerScore += 1;
                 return "You Win! Paper beats Rock!";
             } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+                playerScore += 1;
                 return "You Win! Scissors beats Paper!"; 
             } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+                computerScore += 1;
                 return "You Lose! Paper beats Rock!"; 
             } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+                computerScore += 1;
                 return "You Lose! Scissors beats Paper!";
             } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+                computerScore += 1;
                 return "You Win! Rock beats Scissors!";  
             } else if (playerSelection === computerSelection) {
                 return "It's a Draw!"; 
             }
         }
 
+    
     const playerSelection = capitalise(playerChoice);
     const computerSelection = computerPlay;
+    let playerScore = 0;
+    let computerScore = 0;
     
     console.log("You selected " + playerSelection);
     console.log("The computer selected " + computerSelection);
     console.log(playRound(playerSelection, computerSelection));
+    console.log("Your score " +playerScore + ", computers score " + computerScore);
+
+
+
   
   </script>
   </body>
 </html>
+
+
+new function called game()
+use previous function playRound inside game that plays 5 round game, and keeps score - reports winner at the end
+
+
+game()
+
 
 
 
