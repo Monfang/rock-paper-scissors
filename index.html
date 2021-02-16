@@ -30,6 +30,7 @@
             }      
             //console.log(playerChoice);
 
+            // -- Play Round --
             function playRound (playerSelection, computerSelection) {
                 if (playerSelection === "Rock" && computerSelection === "Scissors") {
                     playerScore++;
@@ -57,12 +58,13 @@
             const playerSelection = playerChoice;
             const computerSelection = computerPlay;
 
-            
+            // -- Console Log --
             console.log("You selected " + playerSelection);
             console.log("The computer selected " + computerSelection);
             console.log(playRound(playerSelection, computerSelection));
             console.log("Your score " + playerScore + ", computers score " + computerScore);
             console.log(" ");
+
         } if (playerScore > computerScore){
             console.log("You Won!"); 
         } else if (playerScore < computerScore){
@@ -72,6 +74,7 @@
         }
     }
 
+    // -- Game Function --
     game();
 
     
