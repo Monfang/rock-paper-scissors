@@ -33,31 +33,31 @@ function game(playerChoice) {
             function playRound (playerSelection, computerSelection) {
 
                 if (playerSelection === "rock" && computerSelection === "scissors") {
-                    document.querySelector('.resultComment').innerHTML = 'You Win! Rock beats Scissors!';
+                    document.querySelector('.resultComment').innerHTML = '<p>You Win! Rock beats Scissors!</p>';
                     playerScore++;
                     return "You Win! Rock beats Scissors!";
                     } else if (playerSelection === "paper" && computerSelection === "rock") {
-                        document.querySelector('.resultComment').innerHTML = 'You Win! Paper beats Rock!';
+                        document.querySelector('.resultComment').innerHTML = '<p>You Win! Paper beats Rock!</p>';
                         playerScore++;
                         return "You Win! Paper beats Rock!";
                     } else if (playerSelection === "scissors" && computerSelection === "paper") {
-                        document.querySelector('.resultComment').innerHTML = 'You Win! Scissors beats Paper!';
+                        document.querySelector('.resultComment').innerHTML = '<p>You Win! Scissors beats Paper!</p>';
                         playerScore++;
                         return "You Win! Scissors beats Paper!"; 
                     } else if (playerSelection === "rock" && computerSelection === "paper") {
-                        document.querySelector('.resultComment').innerHTML = 'You Lose! Paper beats Rock!';
+                        document.querySelector('.resultComment').innerHTML = '<p>You Lose! Paper beats Rock!</p>';
                         computerScore++;
                         return "You Lose! Paper beats Rock!"; 
                     } else if (playerSelection === "paper" && computerSelection === "scissors") {
-                        document.querySelector('.resultComment').innerHTML = 'You Lose! Scissors beats Paper!';
+                        document.querySelector('.resultComment').innerHTML = '<p>You Lose! Scissors beats Paper!</p>';
                         computerScore++;
                         return "You Lose! Scissors beats Paper!";
                     } else if (playerSelection === "scissors" && computerSelection === "rock") {
-                        document.querySelector('.resultComment').innerHTML = 'You Lose! Rock beats Scissors!';
+                        document.querySelector('.resultComment').innerHTML = '<p>You Lose! Rock beats Scissors!</p>';
                         computerScore++;
                         return "You Lose! Rock beats Scissors!";  
                     } else if (playerSelection === computerSelection) {
-                        document.querySelector('.resultComment').innerHTML = "It's a Draw!";
+                        document.querySelector('.resultComment').innerHTML = "<p>It's a Draw!</p>";
                         return "It's a Draw!"; 
                     }
 
