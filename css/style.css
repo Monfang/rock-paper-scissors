@@ -31,7 +31,7 @@ body {
 
 .player, .computer {
    padding: 15px; 
-   margin: 0 2em;
+   margin: 0 2em 1em 2em;
    min-width: 200px;
    min-height: 200px;
    border: 1px solid white;
@@ -41,8 +41,12 @@ body {
     
 }
 
-.playerResult, .computerResult {
+#playerResult, #computerResult {
     height: 150px;
+}
+
+#playerScore, #computerScore {
+    color: black;
 }
 
 

@@ -13,8 +13,7 @@
     <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
 </head>
 <body>
-    <!-- JavaScript -->
-    <script src="javascript/script.js"></script>
+    
 
     <!-- Content -->
     <div class="container">
@@ -22,26 +21,28 @@
         <div class="explanation"><p>The winner is the first to 5!</p></div>
 
         <div class="result">
-            <div class="player"><p>Player: 0</p>
-                <img class="playerResult" src="images/rock.png" alt="player choice">
+            <div class="player"><p>Player: <span id="playerScore">0</span></p>
+                <img id="playerResult">
             </div>
-            <div class="computer"><p>Computer: 0</p>
-                <img class="computerResult" src="images/rock.png" alt="computer choice">
+            <div class="computer"><p>Computer: <span id="computerScore">0</span></p>
+                <img id="computerResult" src="">
             </div>
         </div>  
-        <div class="resultComment"><p>...</p></div>
+        <div class="resultComment"></div>
         <div class="choiceText"><p>Make your choice!</p></div>
         <div class="choice">
-            <button id="rock"><img class="playerChoice" src="images/rock.png" alt="rock"></button>
-            <button id="paper"><img class="playerChoice" src="images/paper.png" alt="paper"></button>
-            <button id="scissors"><img class="playerChoice" src="images/scissors.png" alt="scissors"></button>
+            <button onclick="game('rock')" id="rock"><img class="playerChoice" src="images/rock.png" alt="rock"></button>
+            <button onclick="game('paper')" id="paper"><img class="playerChoice" src="images/paper.png" alt="paper"></button>
+            <button onclick="game('scissors')" id="scissors"><img class="playerChoice" src="images/scissors.png" alt="scissors"></button>
         </div>
 
     </div>
 
 
 
-  
+
+    <!-- JavaScript -->
+    <script src="javascript/script.js"></script>
   </body>
 </html>
 
