@@ -14,19 +14,19 @@ function game(playerChoice) {
         const playerSelection = playerChoice;
         const computerSelection = computerPlay;
 
-        if (playerSelection === "rock") {
+        if (playerSelection === "rock" && !(playerScore == 5 || computerScore == 5)) {
             document.getElementById("playerResult").src="images/rock.png";
-        } else if (playerSelection === "scissors") {
+        } else if (playerSelection === "scissors" && !(playerScore == 5 || computerScore == 5)) {
             document.getElementById("playerResult").src="images/scissors.png";
-        } else if (playerSelection === "paper") {
+        } else if (playerSelection === "paper" && !(playerScore == 5 || computerScore == 5)) {
             document.getElementById("playerResult").src="images/paper.png";
         }
 
-        if (computerSelection === "rock") {
+        if (computerSelection === "rock" && !(playerScore == 5 || computerScore == 5)) {
             document.getElementById("computerResult").src="images/rock.png";
-        } else if (computerSelection === "scissors") {
+        } else if (computerSelection === "scissors" && !(playerScore == 5 || computerScore == 5)) {
             document.getElementById("computerResult").src="images/scissors.png";
-        } else if (computerSelection === "paper") {
+        } else if (computerSelection === "paper" && !(playerScore == 5 || computerScore == 5)) {
             document.getElementById("computerResult").src="images/paper.png";
         }
         
@@ -34,37 +34,37 @@ function game(playerChoice) {
             function playRound (playerSelection, computerSelection) {
 
 
-                if (playerSelection === "rock" && computerSelection === "scissors") {
+                if (playerSelection === "rock" && computerSelection === "scissors" && !(playerScore >= 5 || computerScore >= 5)) {
                         document.querySelector('.resultComment').innerHTML = '<p>You Win! Rock beats Scissors!</p>';
                         playerScore++;
                         scoreCheck();
-                    return "You Win! Rock beats Scissors!";
-                    } else if (playerSelection === "paper" && computerSelection === "rock") {
+                        return "You Win! Rock beats Scissors!";
+                    } else if (playerSelection === "paper" && computerSelection === "rock" && !(playerScore >= 5 || computerScore >= 5)) {
                         document.querySelector('.resultComment').innerHTML = '<p>You Win! Paper beats Rock!</p>';
                         playerScore++;
                         scoreCheck();
                         return "You Win! Paper beats Rock!";
-                    } else if (playerSelection === "scissors" && computerSelection === "paper") {
+                    } else if (playerSelection === "scissors" && computerSelection === "paper" && !(playerScore >= 5 || computerScore >= 5)) {
                         document.querySelector('.resultComment').innerHTML = '<p>You Win! Scissors beats Paper!</p>';
                         playerScore++;
                         scoreCheck();
                         return "You Win! Scissors beats Paper!"; 
-                    } else if (playerSelection === "rock" && computerSelection === "paper") {
+                    } else if (playerSelection === "rock" && computerSelection === "paper" && !(playerScore >= 5 || computerScore >= 5)) {
                         document.querySelector('.resultComment').innerHTML = '<p>You Lose! Paper beats Rock!</p>';
                         computerScore++;
                         scoreCheck();
                         return "You Lose! Paper beats Rock!"; 
-                    } else if (playerSelection === "paper" && computerSelection === "scissors") {
+                    } else if (playerSelection === "paper" && computerSelection === "scissors" && !(playerScore >= 5 || computerScore >= 5)) {
                         document.querySelector('.resultComment').innerHTML = '<p>You Lose! Scissors beats Paper!</p>';
                         computerScore++;
                         scoreCheck();
                         return "You Lose! Scissors beats Paper!";
-                    } else if (playerSelection === "scissors" && computerSelection === "rock") {
+                    } else if (playerSelection === "scissors" && computerSelection === "rock" && !(playerScore >= 5 || computerScore >= 5)) {
                         document.querySelector('.resultComment').innerHTML = '<p>You Lose! Rock beats Scissors!</p>';
                         computerScore++;
                         scoreCheck();
                         return "You Lose! Rock beats Scissors!";  
-                    } else if (playerSelection === computerSelection) {
+                    } else if (playerSelection === computerSelection && !(playerScore >= 5 || computerScore >= 5)) {
                         document.querySelector('.resultComment').innerHTML = "<p>It's a Draw!</p>";
                         return "It's a Draw!"; 
                     }
