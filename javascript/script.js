@@ -65,10 +65,6 @@ function game(playerChoice) {
                 }
                
 
-         //document.getElementById("playerScore") = playerScore; 
-         //document.getElementById("computerScore") = computerScore;
-
-
 
         // -- Console Log --
         console.log("You selected " + playerSelection);
@@ -76,6 +72,9 @@ function game(playerChoice) {
         console.log(playRound(playerSelection, computerSelection));
         console.log("Your score " + playerScore + ", computers score " + computerScore);
         console.log(" ");
+
+        document.querySelector('#playerScore').innerHTML = playerScore;
+        document.querySelector('#computerScore').innerHTML = computerScore;
 
     
 }
