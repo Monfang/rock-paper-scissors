@@ -1,10 +1,59 @@
 /* Global */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    min-height: 100%; 
+    background-color: black; 
 }
 
 /* Heading */
-
 .heading {
-    text-align: center;
+    padding-top: 1em;
+}
+
+/* Result */
+.result {
+    display: flex;
+    justify-content: center;
+}
+
+.player, .computer {
+   padding: 15px; 
+   margin: 0 2em;
+   min-width: 200px;
+   min-height: 200px;
+   border: 1px solid white;
+   border-radius: 5px;
+   background-color: white;
+   color: black;
+    
+}
+
+.playerResult, .computerResult {
+    height: 150px;
+}
+
+
+/* Choice */
+#rock, #paper, #scissors {
+    min-width: 150px;
+    min-height: 150px;
+    background-color: white;
+    border: none;
+}
+
+.playerChoice {
+    height: 100px;
 }
