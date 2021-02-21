@@ -6,36 +6,33 @@ function game() {
 
         // -- Computer Selection --  
         // Variable called computerPlay that randomly chooses Rock, Paper or Scissors
-        let computerPlay = ['Rock', 'Paper', 'Scissors'][Math.floor(Math.random() * 3)];
+        let computerPlay = ['rock', 'paper', 'scissors'][Math.floor(Math.random() * 3)];
         //console.log(computerPlay);    
     
         // -- Player Selection --
         // Prompt user for input, capitalise first letter in string
         let playerPrompt = prompt("Round " + round + ": Please choose Rock, Paper or Scissors");
-        let playerChoice = playerPrompt.charAt(0).toUpperCase() + playerPrompt.slice(1).toLowerCase();
-        function capitalise(string) {
-            return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-        }      
+        let playerChoice = playerPrompt.charAt(0).toLowerCase() + playerPrompt.slice(1).toLowerCase();  
         //console.log(playerChoice);
 
         // -- Play Round --
         function playRound (playerSelection, computerSelection) {
-            if (playerSelection === "Rock" && computerSelection === "Scissors") {
+            if (playerSelection === "rock" && computerSelection === "scissors") {
                 playerScore++;
                 return "You Win! Rock beats Scissors!";
-                } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+                } else if (playerSelection === "paper" && computerSelection === "rock") {
                     playerScore++;
                     return "You Win! Paper beats Rock!";
-                } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+                } else if (playerSelection === "scissors" && computerSelection === "paper") {
                     playerScore++;
                     return "You Win! Scissors beats Paper!"; 
-                } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+                } else if (playerSelection === "rock" && computerSelection === "raper") {
                     computerScore++;
                     return "You Lose! Paper beats Rock!"; 
-                } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+                } else if (playerSelection === "paper" && computerSelection === "scissors") {
                     computerScore++;
                     return "You Lose! Scissors beats Paper!";
-                } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+                } else if (playerSelection === "scissors" && computerSelection === "rock") {
                     computerScore++;
                     return "You Win! Rock beats Scissors!";  
                 } else if (playerSelection === computerSelection) {
