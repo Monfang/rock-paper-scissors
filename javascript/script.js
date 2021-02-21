@@ -76,6 +76,24 @@ function game(playerChoice) {
         document.querySelector('#playerScore').innerHTML = playerScore;
         document.querySelector('#computerScore').innerHTML = computerScore;
 
+        if (playerScore == 5 || computerScore == 5) {
+            const container = document.querySelector('.container');
+
+            const content = document.createElement('div');
+            content.classList.add('content');
+            content.innerHTML = '<button class="playAgain" onClick="window.location.reload();">Play Again</button>';
+
+            container.appendChild(content);
+
+
+            if (playerScore == 5) {
+                document.querySelector('.choiceText').innerHTML = "<p>You Won!<p>";
+            } else if (computerScore == 5) {
+                document.querySelector('.choiceText').innerHTML = "<p>You Lose!<p>";
+            }
+            
+        }
+
     
 }
         

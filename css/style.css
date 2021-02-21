@@ -51,7 +51,7 @@ body {
 
 
 /* Choice */
-button {
+button.choice {
     min-width: 150px;
     min-height: 150px;
     background-color: white;
@@ -64,7 +64,15 @@ button:hover{
     border: 5px solid #442ed4;
 }
 
-
 .playerChoice {
     height: 100px;
+}
+
+button.playAgain {
+
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    margin: 1em;
 }
