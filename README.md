@@ -1,5 +1,7 @@
 ## The Odin Project: Fundamentals: Rock Paper Scissors 
 
+This project first involved creating a game of Rock, Paper, Scissors in console.log with prompt being used to take the users input. It was then expanded upon in the browser by creating a basic HTML layout, and some CSS to make it look visually appealing. The JavaScript was then fleshed out using DOM and extra features were added including images changing to reflect selection, comments appearing based on the results of each round, and first to 5 points implemented - adding a Play Again button once a winner was declared.
+
 ### Original Project:
 
 1. Create a game of rock paper scissors to be played against the computer
